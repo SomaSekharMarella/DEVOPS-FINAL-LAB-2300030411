@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import "./App.css";
 
 function App() {
-  const BASE_URL = "http://localhost:2000/course";
+  const BASE_URL = "http://localhost:30032/course";
 
   const [courses, setCourses] = useState([]);
   const [newCourse, setNewCourse] = useState({
@@ -52,6 +52,7 @@ function App() {
       } else {
         setSearchResult(data);
       }
+    // eslint-disable-next-line no-unused-vars
     } catch (error) {
       setSearchResult("NOT_FOUND");
     }
